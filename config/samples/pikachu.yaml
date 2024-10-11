@@ -1,0 +1,8 @@
+apiVersion: pokemon.nsapkota.dev/v1
+kind: Pokemon
+metadata:
+  name: pikachu
+spec:
+  name: Pikachu
+  type:
+    - Electric

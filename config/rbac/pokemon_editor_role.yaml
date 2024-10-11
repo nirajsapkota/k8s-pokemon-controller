@@ -1,0 +1,27 @@
+# permissions for end users to edit pokemons.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: k8s
+    app.kubernetes.io/managed-by: kustomize
+  name: pokemon-editor-role
+rules:
+- apiGroups:
+  - pokemon.nsapkota.dev
+  resources:
+  - pokemons
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - pokemon.nsapkota.dev
+  resources:
+  - pokemons/status
+  verbs:
+  - get

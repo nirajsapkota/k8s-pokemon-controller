@@ -1,0 +1,23 @@
+# permissions for end users to view pokemons.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: k8s
+    app.kubernetes.io/managed-by: kustomize
+  name: pokemon-viewer-role
+rules:
+- apiGroups:
+  - pokemon.nsapkota.dev
+  resources:
+  - pokemons
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - pokemon.nsapkota.dev
+  resources:
+  - pokemons/status
+  verbs:
+  - get

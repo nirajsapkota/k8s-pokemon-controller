@@ -1,0 +1,9 @@
+apiVersion: pokemon.nsapkota.dev/v1
+kind: Pokemon
+metadata:
+  name: infernape
+spec:
+  name: Infernape
+  type:
+    - Fire
+    - Fighting
